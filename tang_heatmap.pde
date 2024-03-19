@@ -31,7 +31,7 @@ void setup() {
     textSize(20);
     frameRate(60);
 
-    String[] read_csv = loadStrings("./tang_setting.csv");
+    String[] read_csv = loadStrings("./tong_setting.csv");
     for(int i = 0; i < 4; i++){
         String[] cash = split(read_csv[i],',');
         if(i == 0) com_port = cash[0];
@@ -174,7 +174,7 @@ void csv_write(){
 
 void keyPressed(){
     if(key == 'w'){
-        file = createWriter("./tang_data/" + today + ".csv");
+        file = createWriter("./tong_data/" + today + ".csv");
         file.print("msec,");
         for(int i = 0; i < 63; i++) file.print("Ch"+(i+1)+",");
         file.println("Ch"+64);
